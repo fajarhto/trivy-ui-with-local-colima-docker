@@ -4,6 +4,12 @@ A personal, independent adaptation of [Trivy UI by geek-kb / Itai Ganot](https:/
 
 This is a community modification for personal use. It is not an official product of Aqua Security, Trivy, Colima, Docker, or ColimaUI, and is not endorsed by those projects. Their names identify compatible tools and credited upstream work.
 
+## Install with an AI assistant
+
+**[Copy the English build and installation prompt](INSTALL_WITH_AI.md)** into Codex or another local coding assistant. It covers Colima and Docker setup, architecture detection, scanner compilation, safe configuration, troubleshooting, and a complete verification scan.
+
+For command-by-command setup, use the **[Colima and Docker installation guide](docs/INSTALLATION.md)**. Both documents preserve existing data and require non-root runtime users.
+
 ## Features
 
 - List local images and all containers, including stopped containers.

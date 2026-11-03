@@ -4,7 +4,7 @@ services:
     image: trivy-ui-local-backend:1.3.0
     build:
       context: ./backend
-      dockerfile: Dockerfile.security-patch
+      dockerfile: Dockerfile
     container_name: trivy-ui-backend
     restart: unless-stopped
     environment:
