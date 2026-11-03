@@ -37,6 +37,7 @@ export default function App() {
           {/* Header */}
           <header className="flex justify-between items-center mb-10">
             <Link to="/" className="flex items-center gap-3">
+              <img src="/logo.svg" alt="" aria-hidden="true" width={42} height={58} className="h-14 w-11 object-contain shrink-0" />
               <span className="text-2xl sm:text-3xl font-bold">Trivy UI with Local Colima Docker</span>
             </Link>
             <button

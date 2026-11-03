@@ -34,7 +34,7 @@ RUN (id fajarhartanto || (addgroup -g 10001 fajarhartanto && adduser -D -u 10001
 ARG VCS_REF=unknown
 LABEL org.opencontainers.image.source="https://github.com/fajarhto/trivy-ui-with-local-colima-docker" \
  org.opencontainers.image.revision="${VCS_REF}" \
- org.opencontainers.image.version="1.3.0"
+ org.opencontainers.image.version="1.3.1"
 
 USER fajarhartanto
 

@@ -48,3 +48,9 @@ The app uses React, React DOM, React Router, React Hot Toast, Recharts, Vite, Ty
 - Node.js and Go: build toolchains with their own bundled dependency notices; not included as source in this repository.
 
 No Docker, Colima, Aqua or CIS logos are used to imply endorsement. Project and product names are used for identification. This repository is published as source for personal/community use; no prebuilt container images or scanner binaries are published by this change.
+
+## Original project logo
+
+The three-color shield with the knight sword inserted into the center of the blue surface is an original geometric project design prepared with AI-assisted drawing tools and approved by Fajar Hartanto in 2026. To the extent Fajar Hartanto holds copyright or related rights in this design, those rights are dedicated under **CC0 1.0 Universal**. See `LICENSES/Project-logo-CC0-1.0.txt`.
+
+This dedication covers `frontend/public/logo.svg`, `logo.png`, `icon.png`, and the favicon files derived from this logo. It does not relicense application code, third-party components, upstream logos, product names or trademarks. No representation of exclusivity, trademark clearance or absence of third-party rights is made.

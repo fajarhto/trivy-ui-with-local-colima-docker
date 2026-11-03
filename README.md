@@ -76,3 +76,9 @@ The frontend build validates TypeScript. API routes remain under `/api`; local D
 - **Local modifications** — Fajar Hartanto, 2026. MIT, subject to retained third-party notices.
 
 See [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md), [NOTICE](NOTICE), [LICENSE](LICENSE), and [LICENSES/](LICENSES/). Dependencies keep their own licenses. Personal use does not waive license conditions when redistributing source, binaries or container images.
+
+## Project logo
+
+<img src="frontend/public/logo.svg" width="56" alt="Three-color shield with a knight sword entering the center of the blue surface" />
+
+The original project logo and its derived favicon files are dedicated under **CC0 1.0 Universal**, to the extent of the contributor's rights. The application code retains its own MIT license and third-party notices. See [the logo dedication](LICENSES/Project-logo-CC0-1.0.txt) and [the attribution record](THIRD_PARTY_NOTICES.md#original-project-logo).

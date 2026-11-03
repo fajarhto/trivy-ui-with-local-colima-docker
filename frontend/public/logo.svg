@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -50 128 174" role="img" aria-label="Knight sword inserted into the center of a blue shield surface">
+<!-- SPDX-License-Identifier: CC0-1.0. Original geometric logo, 2026. See LICENSES/Project-logo-CC0-1.0.txt. -->
+<polygon fill="#2459E0" points="64,8 108,24 64,47 20,24"/>
+<polygon fill="#EA3B45" points="20,24 64,47 64,116 41,96 24,67"/>
+<polygon fill="#FFD03B" points="108,24 104,67 87,96 64,116 64,47"/>
+<path fill="none" stroke="white" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" d="m44 61 14 15 27-29"/>
+<g stroke="#172235" stroke-width="2.5" stroke-linejoin="round">
+<path fill="#F0F4FA" d="M56-2H72V26H56Z"/>
+<path fill="#CBD5E1" stroke="none" d="M64-1H70.75V26H64Z"/>
+<rect fill="#2459E0" x="59" y="-34" width="10" height="26" rx="2"/>
+<path stroke="#F0F4FA" stroke-width="2" d="m60-27 8 4m-8 3 8 4"/>
+<path fill="#FFD03B" d="M43-11 52-8H76L85-11V-2L76-4H52L43-2Z"/>
+<circle fill="#FFD03B" cx="64" cy="-39" r="6"/>
+</g>
+<path d="M54 27H74" stroke="#153B9E" stroke-width="3" stroke-linecap="round"/>
+</svg>
