@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:grouping": "node --test tests/dockerGroups.test.mjs"
   },
   "dependencies": {
     "react": "^19.0.0",

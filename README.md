@@ -22,6 +22,7 @@ Start with **[your platform’s prerequisites and installation path](docs/PLATFO
 ## Features
 
 - List local images and all containers, including stopped containers.
+- Group related images and containers into collapsible projects using Compose labels, image associations, and shared name prefixes; toggle to a flat list when needed.
 - Scan an image or the immutable image ID used by a container.
 - Keep Critical / High / Medium / Low counts, last scan time and score in the same table row.
 - Review L1 vulnerabilities, hardening, provenance and freshness components.
