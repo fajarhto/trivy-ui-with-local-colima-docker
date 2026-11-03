@@ -1,4 +1,5 @@
-# Trivy UI with Local Colima Docker
+<h1><img src="frontend/public/logo.svg" alt="" width="42" height="58" align="left" /> Trivy UI with Local Colima Docker</h1>
+<br clear="left" />
 
 A personal, independent adaptation of [Trivy UI by geek-kb / Itai Ganot](https://github.com/geek-kb/trivy-ui), with local Docker/Colima inventory, scanning, inline results, and an L1 security breakdown adapted from [ColimaUI](https://github.com/vnknowledge2014/colima-ui).
 
