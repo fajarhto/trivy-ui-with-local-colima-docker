@@ -105,8 +105,9 @@ Respect your tool permissions and ask for access when the environment requires i
    - Keep the frontend bound to 127.0.0.1. The default URL is http://localhost:3080.
      If 3080 is occupied by another application, use an agreed free loopback port
      and record the override rather than stopping that application.
-   - Keep both runtime image defaults and containers as user fajarhartanto with
-     a nonzero UID. Root is permitted only for necessary image build steps.
+   - Keep both runtime image defaults and containers as a non-root user with
+     a nonzero UID (`app` in this repository). For other projects, preserve their
+     existing non-root runtime account. Root is permitted only for necessary image build steps.
      Do not chmod the Docker socket to 666, enable privileged mode, or change
      runtime users to root. Preserve the reports and trivy-cache named volumes.
 
@@ -122,7 +123,7 @@ Respect your tool permissions and ask for access when the environment requires i
    - Confirm the frontend URL returns HTTP 200 and displays the exact title
      "Trivy UI with Local Colima Docker" and the upstream credit links.
    - Confirm `docker compose -f compose.local.yml exec -T backend id` and the
-     equivalent frontend command show user fajarhartanto with a nonzero UID.
+     equivalent frontend command show user app with a nonzero UID.
    - Check /api/docker/inventory returns images and containers from the selected
      Docker engine. The application must include stopped containers when present.
    - Run a scan of one selected local image from Docker Lokal. Wait for completion,
@@ -154,6 +155,6 @@ If the assistant can already access the checkout, use:
 Read INSTALL_WITH_AI.md and docs/INSTALLATION.md in this checkout, then carry out
 the installation prompt in INSTALL_WITH_AI.md for this computer. Inspect the
 existing Colima/Docker environment first, preserve all data, keep runtime users
-as fajarhartanto (non-root), and verify the UI and a completed image scan.
+as app (non-root), and verify the UI and a completed image scan.
 Use English and report the actual results and unresolved issues.
 ```

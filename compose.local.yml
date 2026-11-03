@@ -16,7 +16,7 @@ services:
       - "${DOCKER_GID:?Set DOCKER_GID to the Docker socket group inside the VM}"
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock:ro
-      - trivy-cache:/home/fajarhartanto/.cache/trivy
+      - trivy-cache:/home/app/.cache/trivy
       - reports:/app/backend/app/storage/reports
     healthcheck:
       test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://localhost:8000/healthz')"]

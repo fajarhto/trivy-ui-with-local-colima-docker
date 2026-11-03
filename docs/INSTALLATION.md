@@ -123,7 +123,7 @@ docker compose -f compose.local.yml exec -T backend id
 docker compose -f compose.local.yml exec -T frontend id
 ```
 
-Both `id` commands must report `fajarhartanto` with a nonzero UID. The backend should be healthy. In the UI, select **Docker Lokal**, choose an image and click **Scan**. Wait for the job to finish. The first scan can take longer because it downloads the vulnerability database. The same row should show counts, score and timestamp; **Security** should open the report. The **Upload File** tab must remain available.
+Both `id` commands must report `app` with a nonzero UID. The backend should be healthy. In the UI, select **Docker Lokal**, choose an image and click **Scan**. Wait for the job to finish. The first scan can take longer because it downloads the vulnerability database. The same row should show counts, score and timestamp; **Security** should open the report. The **Upload File** tab must remain available.
 
 Counts and scores depend on the image and database date. Do not assume that successful installation implies 100/100. A container scan checks its image, not runtime mounts or filesystem changes.
 

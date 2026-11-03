@@ -4,7 +4,7 @@ from app.api.security_summary import evaluate
 
 class SecurityScoringTests(unittest.TestCase):
     def facts(self):
-        return {'Config': {'User':'fajarhartanto','Env':[]},'RepoDigests':['demo@sha256:abc'],'Created':datetime.now(timezone.utc).isoformat()}
+        return {'Config': {'User':'app','Env':[]},'RepoDigests':['demo@sha256:abc'],'Created':datetime.now(timezone.utc).isoformat()}
 
     def test_clean_image_scores_100(self):
         self.assertEqual(evaluate({'Results':[]},self.facts(),'demo:1.2.3','0.76.1','today')['total'],100)

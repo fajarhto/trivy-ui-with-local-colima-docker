@@ -27,7 +27,7 @@ Start with **[your platform’s prerequisites and installation path](docs/PLATFO
 - Keep Critical / High / Medium / Low counts, last scan time and score in the same table row.
 - Review L1 vulnerabilities, hardening, provenance and freshness components.
 - Upload existing Trivy JSON reports and keep reports in a persistent Docker volume.
-- Run frontend and backend as the non-root user `fajarhartanto`.
+- Run frontend and backend as the non-root user `app`.
 
 A container scan examines its underlying image. It does not inspect runtime filesystem changes, mounted volumes, or runtime container permissions. Scoring is a local Python port of ColimaUI's L1 algorithm and rule pack 1.0.0, not a ColimaUI API connection or certification. Results depend on the exact image, scanner build and vulnerability database date. A score of 100 does not establish that an image is free of all security risks.
 

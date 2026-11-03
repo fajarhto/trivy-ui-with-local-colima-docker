@@ -28,9 +28,9 @@ The application runs Linux containers. Its build script uses a POSIX shell, Unix
 - Enough RAM and CPU for compilation and the Docker engine. A 4-CPU/6-GiB Colima VM is an example allocation, not a minimum or a guarantee; the host also needs resources for the Go build and operating system.
 - A local checkout outside cloud-synced directories. On WSL2, use its Linux filesystem, such as `~/src`, rather than a Windows-mounted or OneDrive path.
 - Port 3080 available on loopback, or an explicitly chosen alternative loopback port. Preserve existing applications using that port.
-- Explicit acceptance of Docker-socket access. It grants broad daemon privileges even though the application containers run as non-root `fajarhartanto`; a read-only mount does not make the Docker API read-only.
+- Explicit acceptance of Docker-socket access. It grants broad daemon privileges even though the application containers run as non-root `app`; a read-only mount does not make the Docker API read-only.
 
-The operating-system login name does not need to be `fajarhartanto`. That is the account created **inside** the app images. Configure `DOCKER_GID` from the socket in the selected Docker engine, not from another computer's user/group IDs.
+The operating-system login name does not need to be `app`. That is the account created **inside** the app images. Configure `DOCKER_GID` from the socket in the selected Docker engine, not from another computer's user/group IDs.
 
 ## macOS with Apple Silicon or Intel
 

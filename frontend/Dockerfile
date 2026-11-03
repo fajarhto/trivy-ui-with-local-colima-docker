@@ -28,15 +28,15 @@ COPY --from=builder /app/dist /usr/share/nginx/html
 COPY ./nginx/nginx.conf /etc/nginx/nginx.conf
 COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
 
-RUN (id fajarhartanto || (addgroup -g 10001 fajarhartanto && adduser -D -u 10001 -G fajarhartanto fajarhartanto)) \
-  && chown -R fajarhartanto:fajarhartanto /var/cache/nginx /var/lib/nginx /var/log/nginx
+RUN (id app || (addgroup -g 10001 app && adduser -D -u 10001 -G app app)) \
+  && chown -R app:app /var/cache/nginx /var/lib/nginx /var/log/nginx
 
 ARG VCS_REF=unknown
 LABEL org.opencontainers.image.source="https://github.com/fajarhto/trivy-ui-with-local-colima-docker" \
  org.opencontainers.image.revision="${VCS_REF}" \
  org.opencontainers.image.version="1.4.0"
 
-USER fajarhartanto
+USER app
 
 EXPOSE 8080
 
