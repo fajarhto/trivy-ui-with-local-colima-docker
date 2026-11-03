@@ -1,6 +1,8 @@
 # Installation with Colima and Docker
 
-For an assistant to do the work, copy the [AI installation prompt](../INSTALL_WITH_AI.md). This guide is the manual equivalent. Commands below target a new macOS installation; inspect an existing installation before changing it.
+For an assistant to do the work, copy the [AI installation prompt](../INSTALL_WITH_AI.md). This guide contains the shared build/configuration steps and the macOS setup path. **Read [platform status, prerequisites and installation paths](PLATFORMS.md) first:** only macOS Apple Silicon has been tested locally. Intel macOS, Linux and Windows/WSL2 paths are experimental and untested; native Windows is not supported. For Linux/WSL2, prepare the platform using that guide, skip macOS-only steps 2-3 below, and continue from step 4.
+
+**No installation help, troubleshooting, technical support or other assistance is provided.** This is a personal experiment shared as is; see [the no-support policy](../SUPPORT.md).
 
 ## 1. Check the host
 

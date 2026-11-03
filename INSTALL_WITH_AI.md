@@ -2,7 +2,9 @@
 
 Copy the prompt below into a coding assistant that can read files and run commands on the computer where you want to install the application. This works with Codex or another assistant with equivalent local tools. A text-only chatbot can explain the steps but cannot perform the installation for you.
 
-The prompt targets macOS with Colima and Docker, including Apple Silicon and Intel. It instructs the assistant to inspect your existing setup, keep your data, build the scanner, install the app, and verify the result. Linux users should have the assistant follow the Linux branch rather than run Homebrew commands intended for macOS.
+**Only macOS Apple Silicon with Colima/Docker has been tested locally.** Intel macOS, Linux, and Windows via WSL2/Docker Desktop have documented but untested experimental paths. Native Windows installation and Windows containers are not supported. Read [platform prerequisites and instructions](docs/PLATFORMS.md) first.
+
+**No installation help, troubleshooting, technical support or other assistance is provided by the project.** It is shared as is for people who want to experiment. An AI prompt is self-service documentation, not a support service or a guarantee that installation will work. See [SUPPORT.md](SUPPORT.md).
 
 If you prefer to run commands yourself, see the [installation guide](docs/INSTALLATION.md).
 
@@ -26,7 +28,11 @@ Respect your tool permissions and ask for access when the environment requires i
    - Inspect existing Colima profiles and Docker contexts. Use the intended local
      Colima Docker engine; do not accidentally build against a remote daemon.
    - Read the repository README.md, docs/INSTALLATION.md, compose.local.yml,
-     backend/Dockerfile, frontend/Dockerfile, and scripts/rebuild-scanner.sh.
+     docs/PLATFORMS.md, SUPPORT.md, backend/Dockerfile, frontend/Dockerfile,
+     and scripts/rebuild-scanner.sh.
+   - Explain the tested/experimental status of this host platform. Do not claim
+     Linux, Intel macOS or Windows/WSL2 has been tested by the author. The project
+     provides no support or assistance; this session is the user's own experiment.
      Treat the checked-out files as the source of truth if this prompt ages.
    - Use a local directory with enough space, preferably outside cloud-synced
      folders. Do not overwrite an existing checkout or discard uncommitted work.
@@ -56,6 +62,13 @@ Respect your tool permissions and ask for access when the environment requires i
      Use the official distro-specific Docker/Compose installation instructions,
      or official Colima instructions if Colima is specifically desired. Do not
      apply macOS-specific package paths on Linux. Explain any unsupported platform.
+   - On Windows, use only the documented experimental WSL2/Ubuntu + Docker Desktop
+     Linux-container path in docs/PLATFORMS.md. Explain its prerequisites before
+     making changes. Run the project shell scripts and install Go inside WSL2,
+     use the WSL Linux filesystem, and do not add a competing Docker daemon to a
+     Docker Desktop-integrated WSL distribution. Native Windows/PowerShell builds,
+     Windows containers and direct named-pipe mounting are unsupported. Respect
+     any required administrator actions, terms acceptance and restart handoffs.
    - Verify the selected context with `docker context show`, `docker context
      inspect`, and `docker info` before proceeding.
 
@@ -129,7 +142,8 @@ Respect your tool permissions and ask for access when the environment requires i
    Provide exact commands to start, stop, view logs, scan again, and update the app.
    Distinguish checks actually performed from checks that could not be completed.
    Do not claim success until the application and a complete scan have been verified.
-   Preserve LICENSE, NOTICE, THIRD_PARTY_NOTICES.md and all upstream credits.
+   Preserve LICENSE, NOTICE, THIRD_PARTY_NOTICES.md, SUPPORT.md and all upstream
+   credits. Do not promise author-provided help or guaranteed platform compatibility.
 ```
 
 ## Short prompt after cloning

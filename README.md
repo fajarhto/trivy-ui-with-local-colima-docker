@@ -4,11 +4,19 @@ A personal, independent adaptation of [Trivy UI by geek-kb / Itai Ganot](https:/
 
 This is a community modification for personal use. It is not an official product of Aqua Security, Trivy, Colima, Docker, or ColimaUI, and is not endorsed by those projects. Their names identify compatible tools and credited upstream work.
 
+## Compatibility and no-support policy
+
+**Tested locally only on macOS Apple Silicon with Colima and Docker.** macOS Intel, Linux with local Docker Engine, and Windows through WSL2/Docker Desktop have documented but **untested, experimental** installation paths. Native Windows/PowerShell installation and Windows containers are **not supported**.
+
+See **[platform-specific prerequisites and installation instructions](docs/PLATFORMS.md)** before trying to install. A documented path is not a guarantee of compatibility.
+
+**This is a personal project shared only for people who want to experiment. No installation help, troubleshooting, technical support, maintenance commitment, or other assistance is provided. No response or fix is promised.** Read the **[no-support policy](SUPPORT.md)**. Use the project at your own discretion and keep backups.
+
 ## Install with an AI assistant
 
 **[Copy the English build and installation prompt](INSTALL_WITH_AI.md)** into Codex or another local coding assistant. It covers Colima and Docker setup, architecture detection, scanner compilation, safe configuration, troubleshooting, and a complete verification scan.
 
-For command-by-command setup, use the **[Colima and Docker installation guide](docs/INSTALLATION.md)**. Both documents preserve existing data and require non-root runtime users.
+Start with **[your platform’s prerequisites and installation path](docs/PLATFORMS.md)**, then use the shared **[build and installation steps](docs/INSTALLATION.md)**. Both documents preserve existing data and require non-root runtime users.
 
 ## Features
 
