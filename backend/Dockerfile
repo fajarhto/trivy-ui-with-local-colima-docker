@@ -13,9 +13,10 @@ COPY scripts ./scripts
 RUN (id fajarhartanto || (addgroup -g 10001 fajarhartanto && adduser -D -u 10001 -G fajarhartanto fajarhartanto)) \
  && mkdir -p app/storage/reports logs /home/fajarhartanto/.cache/trivy && chown -R fajarhartanto:fajarhartanto /app/backend /home/fajarhartanto/.cache
 
-LABEL org.opencontainers.image.source="https://github.com/geek-kb/trivy-ui" \
- org.opencontainers.image.revision="bbef4682f9dfd75b27f36ed313a4070e2e5a6cf6" \
- org.opencontainers.image.version="1.2.1-local.1"
+ARG VCS_REF=unknown
+LABEL org.opencontainers.image.source="https://github.com/fajarhto/trivy-ui-with-local-colima-docker" \
+ org.opencontainers.image.revision="${VCS_REF}" \
+ org.opencontainers.image.version="1.3.0"
 USER fajarhartanto
 EXPOSE 8000
 HEALTHCHECK CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/healthz')"
