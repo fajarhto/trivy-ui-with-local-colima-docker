@@ -1,6 +1,2 @@
-version: "3.9"
-
-services:
-  backend:
-    volumes:
-      - ./logs:/app/logs
+# Local Docker integration is configured in docker-compose.yml.
+services: {}

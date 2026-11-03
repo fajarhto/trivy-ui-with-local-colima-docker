@@ -10,6 +10,7 @@ from starlette.middleware.trustedhost import TrustedHostMiddleware
 from starlette.middleware.gzip import GZipMiddleware
 
 from app.api.routes import router
+from app.api.docker_local import router as docker_router
 from app.core.config import get_settings
 from app.core.database import init_db_engine, Base, close_db_connection
 from app.storage.factory import get_storage
@@ -136,6 +137,7 @@ def create_app() -> FastAPI:
     )
     # Include routers
     app.include_router(router, prefix="/api", tags=["system"])
+    app.include_router(docker_router, prefix="/api")
 
     # Log configuration
     logger.info(f"Running with DB_BACKEND={settings.DB_BACKEND}")

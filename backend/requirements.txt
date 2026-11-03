@@ -15,3 +15,5 @@ asyncpg                  # PostgreSQL driver (async)
 aiosqlite                # SQLite driver (async)
 alembic                 # Database migrations
 psycopg-binary         # PostgreSQL driver (sync)
+
+greenlet

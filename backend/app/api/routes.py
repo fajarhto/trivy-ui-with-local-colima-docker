@@ -305,8 +305,6 @@ async def get_report(
             severity_count[vuln.Severity.upper()] += 1
 
         def matches_filters(v):
-            if not v.VulnerabilityID.upper().startswith("CVE-"):
-                return False
             if severity_filter and v.Severity.upper() not in severity_filter:
                 return False
             if pkg_filter and pkg_filter not in v.PkgName.lower():

@@ -66,15 +66,15 @@ Thumbs.db
 logs/*.log
 
 # ------------------------------
-# JSON output files (optional safety)
-# ------------------------------
-*.json
-!frontend/**/*.json  # Allow keeping legitimate frontend JSON configs (if any)
-
-# ------------------------------
-# Other Build Artifacts (optional)
-# ------------------------------
+# Generated files and local data
+.build/
+backend/vendor/trivy
+backend/vendor/trivy.sha256
+backend/app/storage/reports/
+backend/logs/
 *.tar.gz
 *.zip
 coverage/
 htmlcov/
+
+*.tsbuildinfo

@@ -5,6 +5,7 @@ import {useParams, useSearchParams} from "react-router-dom";
 import LoadingSpinner from "./LoadingSpinner";
 import {PieChart, Pie, Cell, Tooltip, ResponsiveContainer} from "recharts";
 import "./Chart.css";
+import SecurityBreakdown from "./SecurityBreakdown";
 
 const SEVERITIES = ["CRITICAL", "HIGH", "MEDIUM", "LOW", "UNKNOWN"];
 const COLORS: Record<string, string> = {
@@ -90,6 +91,8 @@ export default function ReportDetail() {
           target: r.Target,
           id: v.VulnerabilityID,
           pkg: v.PkgName,
+          installed: v.InstalledVersion || "—",
+          fixed: v.FixedVersion || "No fix yet",
           severity: v.Severity.toUpperCase(),
         });
       });
@@ -151,7 +154,10 @@ export default function ReportDetail() {
 
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">{data.artifact}</h1>
+      <a href="/" className="text-sm text-blue-600">← Docker Lokal</a>
+      <h1 className="text-2xl font-bold mb-4 mt-4">{data.artifact}</h1>
+      <SecurityBreakdown id={id} />
+      <h2 className="text-xl font-semibold mb-4">Known vulnerabilities</h2>
 
       {summaryData.reduce((acc, cur) => acc + cur.value, 0) > 0 ? (
         <div className="w-full h-72 mb-6">
@@ -306,13 +312,14 @@ export default function ReportDetail() {
                 {col} {sortBy === col && (sortDir === "asc" ? "↑" : "↓")}
               </th>
             ))}
+            <th className="px-4 py-2 text-left">Installed</th><th className="px-4 py-2 text-left">Fixed version</th>
           </tr>
         </thead>
         <tbody>
           {paginated.length === 0 ? (
             <tr>
               <td
-                colSpan={4}
+                colSpan={6}
                 className="text-center text-gray-400 px-4 py-6 italic"
               >
                 No matching vulnerabilities
@@ -345,6 +352,7 @@ export default function ReportDetail() {
                 >
                   {v.severity}
                 </td>
+              <td className="px-4 py-2 font-mono text-xs">{v.installed}</td><td className="px-4 py-2 font-mono text-xs">{v.fixed}</td>
               </tr>
             ))
           )}

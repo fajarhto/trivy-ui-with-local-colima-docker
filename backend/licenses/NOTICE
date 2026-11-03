@@ -1,0 +1,10 @@
+Trivy UI with Local Colima Docker
+Personal community modification by Fajar Hartanto, 2026.
+
+Based on Trivy UI — Copyright (c) 2023 geek-kb — MIT.
+Adapted ColimaUI security rules and scoring — Copyright (c) 2026 vnknowledge2014 — MIT.
+Uses Trivy — Copyright 2019-2020 Aqua Security Software Ltd. — Apache-2.0.
+This product includes software developed by Aqua Security (https://aquasec.com).
+
+Original upstream notices are retained in LICENSES/.
+No upstream endorsement or certification is asserted.

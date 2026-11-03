@@ -7,6 +7,10 @@ class Vulnerability(BaseModel):
     VulnerabilityID: str
     PkgName: str
     Severity: str
+    InstalledVersion: Optional[str] = None
+    FixedVersion: Optional[str] = None
+    Title: Optional[str] = None
+    PrimaryURL: Optional[str] = None
 
 
 class Result(BaseModel):

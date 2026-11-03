@@ -8,5 +8,5 @@ spec:
   accessModes:
     - ReadWriteOnce
   hostPath:
-    path: /Users/itaig/src/trivy-ui/backend/app/postgres/data
+    path: /var/lib/trivy-ui/postgres
   storageClassName: standard

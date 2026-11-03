@@ -8,5 +8,5 @@ spec:
   accessModes:
     - ReadWriteMany
   hostPath:
-    path: /Users/itaig/src/trivy-ui/backend/app/storage/reports
+    path: /var/lib/trivy-ui/reports
   storageClassName: standard
